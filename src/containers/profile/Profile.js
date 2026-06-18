@@ -16,14 +16,20 @@ export default function Profile() {
   useEffect(() => {
     if (openSource.showGithubProfile === "true") {
       const getProfileData = () => {
-        fetch("/profile.json")
+        fetch("https://api.github.com/users/VURE-SATHVIK-22")
           .then(result => {
             if (result.ok) {
               return result.json();
             }
           })
           .then(response => {
-            setProfileFunction(response.data.user);
+            const mappedUser = {
+              name: response.name || response.login,
+              bio: response.bio,
+              avatarUrl: response.avatar_url,
+              location: response.location
+            };
+            setProfileFunction(mappedUser);
           })
           .catch(function (error) {
             console.error(

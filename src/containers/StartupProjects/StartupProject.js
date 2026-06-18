@@ -3,6 +3,7 @@ import "./StartupProjects.scss";
 import {bigProjects} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import Button from "../../components/button/Button";
 
 export default function StartupProject() {
   function openUrlInNewTab(url) {
@@ -43,15 +44,7 @@ export default function StartupProject() {
                       : "project-card project-card-light"
                   }
                 >
-                  {project.image ? (
-                    <div className="project-image">
-                      <img
-                        src={project.image}
-                        alt={project.projectName}
-                        className="card-image"
-                      ></img>
-                    </div>
-                  ) : null}
+
                   <div className="project-detail">
                     <h5
                       className={isDark ? "dark-mode card-title" : "card-title"}
@@ -87,6 +80,12 @@ export default function StartupProject() {
               );
             })}
           </div>
+          <Button
+            text={"More Projects"}
+            className="project-button"
+            href="/projects"
+            newTab={false}
+          />
         </div>
       </div>
     </Fade>

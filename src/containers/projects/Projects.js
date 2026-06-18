@@ -16,7 +16,7 @@ export default function Projects() {
 
   useEffect(() => {
     const getRepoData = () => {
-      fetch("/profile.json")
+      fetch("https://api.github.com/users/VURE-SATHVIK-22/repos?sort=updated&per_page=6")
         .then(result => {
           if (result.ok) {
             return result.json();
@@ -24,7 +24,22 @@ export default function Projects() {
           throw result;
         })
         .then(response => {
-          setrepoFunction(response.data.user.pinnedItems.edges);
+          const mappedRepos = response.map(r => ({
+            node: {
+              id: r.id,
+              name: r.name,
+              description: r.description,
+              url: r.html_url,
+              forkCount: r.forks_count,
+              stargazers: { totalCount: r.stargazers_count },
+              diskUsage: r.size,
+              primaryLanguage: r.language ? {
+                name: r.language,
+                color: "#6c63ff"
+              } : null
+            }
+          }));
+          setrepoFunction(mappedRepos);
         })
         .catch(function (error) {
           console.error(
@@ -62,8 +77,8 @@ export default function Projects() {
           <Button
             text={"More Projects"}
             className="project-button"
-            href={socialMediaLinks.github}
-            newTab={true}
+            href="/projects"
+            newTab={false}
           />
         </div>
       </Suspense>

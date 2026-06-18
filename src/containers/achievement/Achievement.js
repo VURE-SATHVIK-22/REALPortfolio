@@ -4,6 +4,7 @@ import AchievementCard from "../../components/achievementCard/AchievementCard";
 import {achievementSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import Button from "../../components/button/Button";
 export default function Achievement() {
   const {isDark} = useContext(StyleContext);
   if (!achievementSection.display) {
@@ -34,7 +35,7 @@ export default function Achievement() {
             </p>
           </div>
           <div className="achievement-cards-div">
-            {achievementSection.achievementsCards.map((card, i) => {
+            {achievementSection.achievementsCards.slice(0, 2).map((card, i) => {
               return (
                 <AchievementCard
                   key={i}
@@ -50,6 +51,12 @@ export default function Achievement() {
               );
             })}
           </div>
+          <Button
+            text={"More Certifications"}
+            className="project-button"
+            href="/certifications"
+            newTab={false}
+          />
         </div>
       </div>
     </Fade>
