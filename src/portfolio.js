@@ -255,7 +255,7 @@ const achievementSection = {
     {
       title: "Hackathon Finalist",
       subtitle: "Top 6 of 700+ teams (4,000+ participants) in National Hackathon. Top 5 of 200+ in Vignan Hackathon.",
-      image: require("./assets/images/devpostLogo.png"),
+      image: require("./assets/images/vignanLogo.png"),
       imageAlt: "Hackathon Logo",
       footerLink: []
     },
@@ -269,14 +269,14 @@ const achievementSection = {
     {
       title: "Hackathon Participant",
       subtitle: "Participated in Hackathon at GITAM Deemed University (May 2024).",
-      image: require("./assets/images/gitamLogo.png"),
+      image: require("./assets/images/codeInLogo.webp"),
       imageAlt: "Gitam Hackathon",
       footerLink: []
     },
     {
       title: "Hackathon Participant",
       subtitle: "Participated in Hackathon at BV Raju Institute of Technology (BVRIT) (May 2024).",
-      image: require("./assets/images/bvritLogo.png"),
+      image: require("./assets/images/codeInLogo.webp"),
       imageAlt: "BVRIT Hackathon",
       footerLink: []
     },

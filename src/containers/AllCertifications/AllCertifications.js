@@ -23,7 +23,7 @@ export default function AllCertifications() {
           <h1 className="project-title" style={{ marginTop: '50px', textAlign: 'center' }}>
             All Certifications
           </h1>
-          <div className="achievement-cards-div" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', marginTop: '30px' }}>
+          <div className="achievement-cards-grid">
             {achievementSection.achievementsCards.map((card, i) => (
               <AchievementCard
                 key={i}
