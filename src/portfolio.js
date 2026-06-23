@@ -255,35 +255,35 @@ const achievementSection = {
     {
       title: "Hackathon Finalist",
       subtitle: "Top 6 of 700+ teams (4,000+ participants) in National Hackathon. Top 5 of 200+ in Vignan Hackathon.",
-      image: require("./assets/images/codeInLogo.webp"),
+      image: "https://logo.clearbit.com/devpost.com",
       imageAlt: "Hackathon Logo",
       footerLink: []
     },
     {
       title: "AI & Data Engineering Bootcamps",
       subtitle: "Completed AI Engineer Bootcamp and Data Engineer Bootcamp on Udemy.",
-      image: require("./assets/images/pwaLogo.webp"),
+      image: "https://logo.clearbit.com/udemy.com",
       imageAlt: "Bootcamp Logo",
       footerLink: []
     },
     {
       title: "Hackathon Participant",
       subtitle: "Participated in Hackathon at GITAM Deemed University (May 2024).",
-      image: require("./assets/images/codeInLogo.webp"),
+      image: "https://logo.clearbit.com/gitam.edu",
       imageAlt: "Gitam Hackathon",
       footerLink: []
     },
     {
       title: "Hackathon Participant",
       subtitle: "Participated in Hackathon at BV Raju Institute of Technology (BVRIT) (May 2024).",
-      image: require("./assets/images/codeInLogo.webp"),
+      image: "https://logo.clearbit.com/bvrit.ac.in",
       imageAlt: "BVRIT Hackathon",
       footerLink: []
     },
     {
       title: "Ideathon Organizer",
       subtitle: "Vice President of NextGen Innovators Club. Played a key role in organizing an Ideathon, encouraging students to innovate (Nov 2024 - Present).",
-      image: require("./assets/images/codeInLogo.webp"),
+      image: "https://img.icons8.com/color/256/innovation.png",
       imageAlt: "Ideathon Organizer",
       footerLink: []
     }
