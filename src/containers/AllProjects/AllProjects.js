@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./AllProjects.scss";
-import GithubRepoCard from "../../components/githubRepoCard/GithubRepoCard";
+
 import { StyleProvider } from "../../contexts/StyleContext";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import Loading from "../loading/Loading";
