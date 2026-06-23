@@ -37,7 +37,16 @@ export default function AllProjects() {
           throw result;
         })
         .then(response => {
-          const mappedRepos = response.map(r => ({
+          const impactfulProjects = [
+            "Self-Healing-RAG-Pipeline",
+            "CodeReview-AI",
+            "DeepResearch_Pro",
+            "Jarvis_AI",
+            "langgraph-software-agency",
+            "Nexus_Reach_B2B"
+          ];
+          const filteredResponse = response.filter(r => impactfulProjects.includes(r.name));
+          const mappedRepos = filteredResponse.map(r => ({
             node: {
               id: r.id,
               name: r.name,
